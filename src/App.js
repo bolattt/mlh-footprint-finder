@@ -12,6 +12,7 @@ function App() {
       <Header />
       <FormContainer />
       <MoreInfo />
+      <Footer />
     </div>
   );
 }
