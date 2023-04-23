@@ -6,6 +6,7 @@ function Form({ setFootprint, footprint, setImgLink }) {
   const [yearlyMileage, setYearlyMileage] = useState("");
   const [flights, setFlights] = useState(0);
   const [flightsOver4hr, setFlightsOver4hr] = useState(false);
+  const [total, setTotal] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,15 +17,16 @@ function Form({ setFootprint, footprint, setImgLink }) {
       yearlyMileage * 0.79 +
       flights * 1100 +
       flightsOver4hr * 4400;
+    setTotal(total);
     if (total < 16000) {
       setImgLink("/low.png");
-      setFootprint("low");
+      setFootprint("Low");
     } else if (total < 22000) {
       setImgLink("/average.png");
-      setFootprint("average");
+      setFootprint("Average");
     } else {
       setImgLink("/high.png");
-      setFootprint("high");
+      setFootprint("High");
     }
   }
 
@@ -99,7 +101,9 @@ function Form({ setFootprint, footprint, setImgLink }) {
           Submit
         </button>
       </form>
-      {footprint}
+      {footprint
+        ? `${footprint} : Your carbon footprint is ${total} pounds per year.`
+        : ""}
     </div>
   );
 }
