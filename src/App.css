@@ -12,3 +12,8 @@
 .form {
   width: 50%;
 }
+
+body{
+  background-image: url("./background.jpg");
+  background-size: contain;
+}

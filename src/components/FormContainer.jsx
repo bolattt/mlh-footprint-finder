@@ -20,7 +20,7 @@ function FormContainer() {
         setFootprint={setFootprint}
         setImgLink={setImgLink}
       />
-        <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+       
       </div>
     </div>
   </div>
