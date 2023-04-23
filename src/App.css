@@ -1,0 +1,13 @@
+.form-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.form-container img {
+  width: 50%;
+  height: auto;
+}
+
+.form {
+  width: 50%;
+}
