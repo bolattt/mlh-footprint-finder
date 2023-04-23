@@ -3,8 +3,7 @@ import React from "react";
 function MoreInfo() {
   return (
     <div class="alert alert-success">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+    Statistics provided by<a href="https://justenergy.com/blog/how-to-calculate-your-carbon-footprint/" class="alert-link">Just energy.com</a>.
   </div>)
 }
 
