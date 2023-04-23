@@ -1,14 +1,14 @@
-import "./App.css";
+// import "./App.css";
 import Header from "./components/Header";
 import MoreInfo from "./components/MoreInfo";
 import FormContainer from "./components/FormContainer";
 import Footer from "./components/Footer";
 
-import "./bootstrap.css";
+import "bootswatch/dist/quartz/bootstrap.min.css"; // Added this :boom:
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <FormContainer />
       <MoreInfo />
