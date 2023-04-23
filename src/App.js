@@ -4,7 +4,7 @@ import MoreInfo from "./components/MoreInfo";
 import FormContainer from "./components/FormContainer";
 import Footer from "./components/Footer";
 
-import "bootswatch/dist/quartz/bootstrap.min.css"; // Added this :boom:
+import "./bootswatch/dist/quartz/bootstrap.min.css"; // Added this :boom:
 
 function App() {
   return (
