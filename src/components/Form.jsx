@@ -11,17 +11,17 @@ function Form({ setFootprint, footprint, setImgLink }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    let total =
+    let totalFootprint =
       electric * 105 +
       gas * 105 +
       yearlyMileage * 0.79 +
       flights * 1100 +
       flightsOver4hr * 4400;
-    setTotal(total);
-    if (total < 16000) {
+    setTotal(totalFootprint);
+    if (totalFootprint < 16000) {
       setImgLink("/low.png");
       setFootprint("Low");
-    } else if (total < 22000) {
+    } else if (totalFootprint < 22000) {
       setImgLink("/average.png");
       setFootprint("Average");
     } else {
@@ -102,7 +102,12 @@ function Form({ setFootprint, footprint, setImgLink }) {
         </button>
       </form>
       {footprint
-        ? `${footprint} : Your carbon footprint is ${total} pounds per year.`
+        ? `${footprint} : Your carbon footprint is ${total} pounds per year. \n`
+        : ""}
+      {total
+        ? `${Math.round(
+            total / 2000
+          )} tree will be needed to offset. On average, one broad leaf tree will absorb in the region of 1 tonne of carbon dioxide during its full life-time (approximately 100 years).`
         : ""}
     </div>
   );
