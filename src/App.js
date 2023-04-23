@@ -4,7 +4,7 @@ import MoreInfo from "./components/MoreInfo";
 import FormContainer from "./components/FormContainer";
 import Footer from "./components/Footer";
 
-import "./bootstrap.min.css";
+import "./bootstrap.css";
 
 function App() {
   return (
