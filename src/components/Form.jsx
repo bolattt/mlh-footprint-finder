@@ -1,28 +1,38 @@
+import { useState } from "react";
 import axios from "axios";
 
-const options = {
-  method: "GET",
-  url: "https://carbonfootprint1.p.rapidapi.com/CleanHydroToCarbonFootprint",
-  params: { energy: "Solar", consumption: "500" },
-  headers: {
-    "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
-    "X-RapidAPI-Host": "carbonfootprint1.p.rapidapi.com",
-  },
-};
-
 function Form() {
+  const [electric, setElectric] = useState("");
+  const [gas, setGas] = useState("");
+  const [yearlyMileage, setYearlyMileage] = useState("");
+  const [flights, setFlights] = useState(0);
+  const [flightsOver4hr, setFlightsOver4hr] = useState(false);
+  const [recyclePaper, setRecyclePaper] = useState(false);
+  const [recycleTin, setRecycleTin] = useState(false);
+
   function handleSubmit(e) {
     e.preventDefault();
-    axios
-      .request(options)
-      .then(function (response) {
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
   }
-  return <div className="form">Form</div>;
+
+  return (
+    <div className="form p-3">
+      <form onSubmit={handleSubmit}>
+        <div className="form-group mb-2">
+          <label htmlFor="electric">Monthly Electric Bill</label>
+          <input
+            type="text"
+            className="form-control"
+            id="electric"
+            placeholder="Electric Bill"
+          />
+        </div>
+
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
 }
 
 export default Form;
