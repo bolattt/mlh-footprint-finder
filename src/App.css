@@ -16,4 +16,5 @@
 body{
   background-image: url("./background.jpg");
   background-size: contain;
+  padding: 20px;
 }
