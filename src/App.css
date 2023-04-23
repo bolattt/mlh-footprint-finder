@@ -1,0 +1,14 @@
+.form-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.form-container img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.form {
+  width: 50%;
+}
